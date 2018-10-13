@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Calculadora"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textViewValor1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VALOR"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textViewValor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VALOR"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/botonSuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/botonResta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/botonMultiplicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="*" />
+
+    <Button
+        android:id="@+id/botonPotencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="^" />
+
+    <Button
+        android:id="@+id/botonDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="/" />
+
+    <Button
+        android:id="@+id/botonResto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="%" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESULTADO"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/botonGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="GUARDAR" />
+
+    <Button
+        android:id="@+id/botonCancelar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="CANCELAR" />
+
+</LinearLayout>
