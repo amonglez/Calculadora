@@ -48,4 +48,35 @@ public class Operacion implements Serializable {
     public void setResultado(double resultado) {
         this.resultado = resultado;
     }
+
+    public double sumar() {
+        resultado = valor1 + valor2;
+        return resultado;
+    }
+
+    public double restar() {
+        resultado = valor1 - valor2;
+        return resultado;
+    }
+
+    public double multiplicar() {
+        resultado = valor1 * valor2;
+        return resultado;
+    }
+
+    public double potencia() {
+        resultado = Math.pow(valor1, valor2);
+        return resultado;
+    }
+
+    public double dividir() {
+        resultado = valor1 / valor2;
+        return resultado;
+    }
+
+    public double resto() {
+        resultado = valor1 % valor2;
+        return resultado;
+    }
+
 }

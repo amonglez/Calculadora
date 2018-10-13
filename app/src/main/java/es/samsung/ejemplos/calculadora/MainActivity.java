@@ -10,9 +10,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     EditText editTextNumero1, editTextNumero2;
-    TextView editTextResultadoFinal;
+    TextView textViewResultadoFinal;
     Button aceptar;
     Operacion operacion;
+    String resultadoFinal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         editTextNumero1 = findViewById(R.id.editTextNumero1);
         editTextNumero2 = findViewById(R.id.editTextNumero2);
-        editTextResultadoFinal = findViewById(R.id.textViewResultadoFinal);
+        textViewResultadoFinal = findViewById(R.id.textViewResultadoFinal);
         aceptar = findViewById(R.id.botonAceptar);
 
         aceptar.setOnClickListener(new View.OnClickListener() {
@@ -32,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void enviarValor (View view) {
-        Intent intent = new Intent (this, Calculadora.class);
+    public void enviarValor(View view) {
+        Intent intent = new Intent(this, Calculadora.class);
         operacion = new Operacion();
         operacion.setValor1(Integer.valueOf(editTextNumero1.getText().toString()));
         operacion.setValor2(Integer.valueOf(editTextNumero2.getText().toString()));
@@ -42,4 +43,11 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, 12);
     }
 
+    protected void onActivityResult(int resultado, int codigo, Intent data) {
+        if (resultado == 12 && codigo == RESULT_OK) {
+            operacion = (Operacion) getIntent().getExtras().getSerializable("Operacion");
+            resultadoFinal = String.valueOf(operacion.getResultado());
+            textViewResultadoFinal.setText(resultadoFinal);
+        }
+    }
 }
