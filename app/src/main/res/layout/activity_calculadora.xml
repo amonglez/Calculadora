@@ -9,13 +9,6 @@
     android:gravity="center">
 
     <TextView
-        android:id="@+id/textViewValor1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="VALOR"
-        android:textAlignment="center" />
-
-    <TextView
         android:id="@+id/textViewValor2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
